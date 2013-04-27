@@ -1,41 +1,15 @@
 Testsuite: bluej.parser.BasicParseTest
-Tests run: 28, Failures: 0, Errors: 5, Time elapsed: 0.348 sec
+Tests run: 28, Failures: 0, Errors: 5, Time elapsed: 0.084 sec
 
-Testcase: testValidClassInfo5 took 0.041 sec
-Testcase: testMultiDimensionalArrayParam took 0.002 sec
+Testcase: testNoParseExceptionsOnStandardCode took 0.018 sec
 	Caused an ERROR
 null
 java.lang.NullPointerException
 	at java.io.FileInputStream.<init>(FileInputStream.java:134)
 	at bluej.parser.InfoParser.parse(InfoParser.java:151)
 	at bluej.parser.InfoParser.parse(InfoParser.java:142)
-	at bluej.parser.BasicParseTest.testMultiDimensionalArrayParam(Unknown Source)
+	at bluej.parser.BasicParseTest.testNoParseExceptionsOnStandardCode(Unknown Source)
 
-Testcase: testCommentExtraction took 0.004 sec
-Testcase: testCommentExtraction2 took 0.004 sec
-Testcase: testCommentExtraction3 took 0.003 sec
-Testcase: testMultipleInterfaceExtends took 0.001 sec
-Testcase: testInterfaceSelections took 0.248 sec
-Testcase: testDependencyAnalysis took 0.002 sec
-	Caused an ERROR
-null
-java.lang.NullPointerException
-	at java.io.FileInputStream.<init>(FileInputStream.java:134)
-	at bluej.parser.BasicParseTest.testDependencyAnalysis(Unknown Source)
-
-Testcase: testDependencyAnalysis2 took 0.001 sec
-Testcase: testDependencyAnalysis3 took 0.003 sec
-Testcase: testDependencyAnalysis4 took 0.002 sec
-Testcase: testDependencyAnalysis5 took 0.001 sec
-Testcase: testDependencyAnalysis6 took 0.001 sec
-Testcase: testDependencyAnalysis7 took 0.006 sec
-Testcase: testDependencyAnalysis8 took 0.002 sec
-Testcase: testDependencyAnalysis9 took 0.002 sec
-Testcase: testDependencyAnalysis10 took 0.002 sec
-Testcase: testDependencyAnalysis11 took 0.001 sec
-Testcase: testDependencyAnalysis12 took 0.004 sec
-Testcase: testClassModifiers took 0 sec
-Testcase: testAnnotation1 took 0.003 sec
 Testcase: testNoParseExceptionsOnGenerics took 0 sec
 	Caused an ERROR
 null
@@ -45,6 +19,7 @@ java.lang.NullPointerException
 	at bluej.parser.InfoParser.parse(InfoParser.java:142)
 	at bluej.parser.BasicParseTest.testNoParseExceptionsOnGenerics(Unknown Source)
 
+Testcase: testCode took 0.018 sec
 Testcase: testValidClassInfo took 0 sec
 	Caused an ERROR
 null
@@ -53,16 +28,41 @@ java.lang.NullPointerException
 	at bluej.parser.InfoParser.parse(InfoParser.java:151)
 	at bluej.parser.BasicParseTest.testValidClassInfo(Unknown Source)
 
-Testcase: testValidClassInfo2 took 0.001 sec
+Testcase: testValidClassInfo2 took 0.003 sec
 Testcase: testValidClassInfo3 took 0.001 sec
 Testcase: testValidClassInfo4 took 0 sec
-Testcase: testNoParseExceptionsOnStandardCode took 0.001 sec
+Testcase: testValidClassInfo5 took 0.001 sec
+Testcase: testMultiDimensionalArrayParam took 0 sec
 	Caused an ERROR
 null
 java.lang.NullPointerException
 	at java.io.FileInputStream.<init>(FileInputStream.java:134)
 	at bluej.parser.InfoParser.parse(InfoParser.java:151)
 	at bluej.parser.InfoParser.parse(InfoParser.java:142)
-	at bluej.parser.BasicParseTest.testNoParseExceptionsOnStandardCode(Unknown Source)
+	at bluej.parser.BasicParseTest.testMultiDimensionalArrayParam(Unknown Source)
 
-Testcase: testCode took 0.001 sec
+Testcase: testCommentExtraction took 0.002 sec
+Testcase: testCommentExtraction2 took 0.003 sec
+Testcase: testCommentExtraction3 took 0.004 sec
+Testcase: testMultipleInterfaceExtends took 0 sec
+Testcase: testInterfaceSelections took 0.011 sec
+Testcase: testDependencyAnalysis took 0.002 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at java.io.FileInputStream.<init>(FileInputStream.java:134)
+	at bluej.parser.BasicParseTest.testDependencyAnalysis(Unknown Source)
+
+Testcase: testDependencyAnalysis2 took 0.002 sec
+Testcase: testDependencyAnalysis3 took 0.002 sec
+Testcase: testDependencyAnalysis4 took 0.002 sec
+Testcase: testDependencyAnalysis5 took 0 sec
+Testcase: testDependencyAnalysis6 took 0.001 sec
+Testcase: testDependencyAnalysis7 took 0.003 sec
+Testcase: testDependencyAnalysis8 took 0.001 sec
+Testcase: testDependencyAnalysis9 took 0.001 sec
+Testcase: testDependencyAnalysis10 took 0.001 sec
+Testcase: testDependencyAnalysis11 took 0 sec
+Testcase: testDependencyAnalysis12 took 0.003 sec
+Testcase: testClassModifiers took 0 sec
+Testcase: testAnnotation1 took 0.003 sec
