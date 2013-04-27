@@ -1,0 +1,1 @@
+* If running ant, make sure the build.properties has the property bluej_home set to the correct path.
