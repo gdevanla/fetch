@@ -1,0 +1,6 @@
+Testsuite: bluej.utility.JavaReflectiveTests
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.029 sec
+
+Testcase: testGetMethods took 0.024 sec
+Testcase: testPrimitiveFieldAccess took 0.001 sec
+Testcase: testNestedClass took 0.001 sec

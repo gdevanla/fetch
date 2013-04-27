@@ -1,0 +1,22 @@
+Testsuite: bluej.parser.Parse15Test
+Tests run: 3, Failures: 0, Errors: 2, Time elapsed: 0.041 sec
+
+Testcase: testNoParseExceptions took 0.022 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at java.io.FileInputStream.<init>(FileInputStream.java:134)
+	at bluej.parser.InfoParser.parse(InfoParser.java:151)
+	at bluej.parser.InfoParser.parse(InfoParser.java:142)
+	at bluej.parser.Parse15Test.testNoParseExceptions(Unknown Source)
+
+Testcase: testSelections took 0.001 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at java.io.FileInputStream.<init>(FileInputStream.java:134)
+	at bluej.parser.InfoParser.parse(InfoParser.java:151)
+	at bluej.parser.InfoParser.parse(InfoParser.java:142)
+	at bluej.parser.Parse15Test.testSelections(Unknown Source)
+
+Testcase: testStaticImport took 0.013 sec

@@ -1,0 +1,8 @@
+Testsuite: bluej.parser.NodeTreeTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.014 sec
+
+Testcase: testRotation1 took 0.009 sec
+Testcase: testBasic took 0 sec
+Testcase: testRemoval took 0 sec
+Testcase: testRemoval2 took 0.002 sec
+Testcase: testRemoval3 took 0 sec
