@@ -1,4 +1,13 @@
 #!/usr/bin/python
+
+#Run this script on a file that has list of method instrumentation
+#listed along with the tests that were used during instrumenetation
+#
+#This script creates one document pre test and populated the documents
+#with all the methodinfo information. This should be usable as corpora
+#for LSI and RTM.
+
+
 import json
 from collections import defaultdict
 import os
