@@ -1,3 +1,5 @@
 test/classes/*
 lib/*
 test/report/*
+.DS_Store*
+newProject*

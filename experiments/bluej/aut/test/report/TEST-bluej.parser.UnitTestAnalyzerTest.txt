@@ -1,7 +1,0 @@
-Testsuite: bluej.parser.UnitTestAnalyzerTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.003 sec
-
-Testcase: testFindingVariables took 0.002 sec
-Testcase: testFixtureInsertion took 0 sec
-Testcase: testFindingMethods took 0.001 sec
-Testcase: testMethodInsertion took 0 sec

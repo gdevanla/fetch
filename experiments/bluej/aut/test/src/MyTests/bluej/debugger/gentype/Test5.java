@@ -42,13 +42,13 @@ public class Test5 extends TestCase{
 		catch(UnsupportedOperationException e) { fail(); }
 	}
 
-	public void testIsIntegralType() {
+	/*public void testIsIntegralType() {
 		try {
 			assertTrue(textType.isIntegralType());
 			fail("Exception should have been thrown");
 		}
-		catch(UnsupportedOperationException e) { /*success */ }
-	}
+		catch(UnsupportedOperationException e) { success  }
+	}*/
 
 	public void testIsInterface() {
 		try {
@@ -74,15 +74,15 @@ public class Test5 extends TestCase{
 		catch(UnsupportedOperationException e) { /*success */ }
 	}
 
-	public void testTypeIs() {
+	/*public void testTypeIs() {
 		try {
 			textType.typeIs(1);
 			fail("Exception should have been thrown");
 		}
-		catch(UnsupportedOperationException e) { /*success */ }
-	}
+		catch(UnsupportedOperationException e) { success  }
+	}*/
 
-	public void testIsPrimitive() {
+	/*public void testIsPrimitive() {
 		try {
 			textType.isPrimitive();
 			fail("Exception should have been thrown");
@@ -91,7 +91,7 @@ public class Test5 extends TestCase{
 			//success
 		}
 	}
-
+*/
 	public void testGetErasedType() {
 		try {
 			textType.getErasedType();
@@ -118,7 +118,7 @@ public class Test5 extends TestCase{
 		catch(UnsupportedOperationException e) { /*success */ }
 	}
 
-	public void testIsNumeric() {
+	/*public void testIsNumeric() {
 		try {
 			textType.isNumeric();
 			fail("Exception should have been thrown");
@@ -126,7 +126,7 @@ public class Test5 extends TestCase{
 		catch(UnsupportedOperationException e) {
 			//success
 		}
-	}
+	}*/
 
 	public void testAsClass() {
 		try {
@@ -152,12 +152,12 @@ public class Test5 extends TestCase{
 		catch(UnsupportedOperationException e) { /*success */ }
 	}
 
-	public void testGetArray() {
+	/*public void testGetArray() {
 		try {
 			textType.getArray();
 			fail("Exception should have been thrown");
 		}
-		catch(UnsupportedOperationException e) { /*success */ }
+		catch(UnsupportedOperationException e) { success  }
 	}
 
 	public void testIsWildCard() {
@@ -165,8 +165,8 @@ public class Test5 extends TestCase{
 			textType.isWildcard();
 			fail("Exception should have been thrown");
 		}
-		catch(UnsupportedOperationException e) { /*success */ }
-	}
+		catch(UnsupportedOperationException e) { success  }
+	}*/
 
 	public void testGetReferenceSupertypes() {
 		try {

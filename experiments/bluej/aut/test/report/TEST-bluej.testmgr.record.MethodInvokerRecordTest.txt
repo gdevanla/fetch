@@ -1,5 +1,0 @@
-Testsuite: bluej.testmgr.record.MethodInvokerRecordTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.002 sec
-
-Testcase: testMethodInvokerWithBench took 0.001 sec
-Testcase: testMethodInvokerWithBenchTypecast took 0 sec

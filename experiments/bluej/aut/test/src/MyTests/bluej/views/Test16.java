@@ -44,10 +44,18 @@ public class Test16 extends TestCase {
 		View view = View.getView(Test15.class);
 		MethodView[] methodViews = view.getAllMethods();
 		assertEquals(70 ,methodViews.length);
-		assertEquals("MyTests.bluej.pkgmgr.Test15",methodViews[69].getClassName());
-		assertEquals("setUp",methodViews[69].getName());
-		assertEquals(0,methodViews[69].getParameterCount());
-		assertEquals("void",methodViews[69].getReturnType().getQualifiedName());
+		boolean test1=false;
+		boolean test2 = false;
+		for(int i=0; i< methodViews.length ; i++) {
+			if("setUp".equals(methodViews[i].getName())) {
+				assertEquals(0,methodViews[i].getParameterCount());
+				assertEquals("void",methodViews[i].getReturnType().getQualifiedName());
+				test1=true;
+			}
+			if("junit.framework.TestCase".equals(methodViews[i].getClassName()))
+				test2= true;
+		}
+		assertTrue(test1);
 	}
 	
 	public void testGetPackageName() {

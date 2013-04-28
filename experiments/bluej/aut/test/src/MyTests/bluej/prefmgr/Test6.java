@@ -42,22 +42,23 @@ public class Test6 extends TestCase{
 	}
 	
 	public void test2() {
+		PrefMgr.getRecentProjects().clear();
+		assertEquals(0,PrefMgr.getRecentProjects().size());
+		String currentDir =  System.getProperty("user.dir");
+		String projectName = currentDir + File.separator + "newProject1";
+		
+		PrefMgr.addRecentProject(projectName);
+		assertEquals(1,PrefMgr.getRecentProjects().size());
+
+	}
+	
+	public void test3() {
 		assertEquals(1,PrefMgr.getRecentProjects().size());
 		String currentDir =  System.getProperty("user.dir");
 		String projectName = currentDir + File.separator + "newProject1";
 		
 		PrefMgr.addRecentProject(projectName);
-		assertEquals(2,PrefMgr.getRecentProjects().size());
-
-	}
-	
-	public void test3() {
-		assertEquals(2,PrefMgr.getRecentProjects().size());
-		String currentDir =  System.getProperty("user.dir");
-		String projectName = currentDir + File.separator + "newProject1";
-		
-		PrefMgr.addRecentProject(projectName);
-		assertEquals(2,PrefMgr.getRecentProjects().size());
+		assertEquals(1,PrefMgr.getRecentProjects().size());
 		
 		assertEquals("SansSerif",PrefMgr.getPopupMenuFont().getName());
 		assertEquals(12,PrefMgr.getPopupMenuFont().getSize());
@@ -69,7 +70,7 @@ public class Test6 extends TestCase{
 	
 	
 	public void test4() {
-		assertEquals(2,PrefMgr.getRecentProjects().size());
+		assertEquals(1,PrefMgr.getRecentProjects().size());
 		
 		assertEquals("SansSerif",PrefMgr.getStandardFont().getName());
 		assertEquals(12,PrefMgr.getStandardFont().getSize());

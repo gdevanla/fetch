@@ -99,7 +99,7 @@ public class Test7 extends TestCase{
 		String currentDir =  System.getProperty("user.dir");
 		String fileName = "newFile.txt";
 		File fileDir = new File(currentDir);
-		String expectedFileName = "newFile\\txt";
+		String expectedFileName = "newFile"+ File.separator + "txt";
 		File file = new File(currentDir + File.separator + expectedFileName);
 		assertEquals(file.getAbsolutePath(), JavaNames.convertQualifiedNameToFile(fileName, fileDir).getAbsolutePath());
 	}

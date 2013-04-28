@@ -94,8 +94,8 @@ public class Test11 extends TestCase{
 		assertEquals(2,sspan.getStartColumn());
 		assertEquals(5,sspan.getEndColumn());
 		
-		assertEquals("<1,2",sloc1.toString());
-		assertEquals("<1,5",sloc2.toString());
+		assertEquals("<1,2>",sloc1.toString());
+		assertEquals("<1,5>",sloc2.toString());
 		assertEquals("<1,2>-<1,5>",sspan.toString());
 		
 	}
