@@ -83,7 +83,7 @@ public class Test18 extends Mocks {
 		assertEquals(0.5f,((TextArea) info.getComponents()[3]).getAlignmentY());
 		assertEquals(4,((TextArea) info.getComponents()[3]).getX());
 		assertEquals(10,((TextArea) info.getComponents()[3]).getY());
-		assertEquals("Garamond Italic",((TextArea) info.getComponents()[3]).getFont().getFontName());
+		assertEquals("Dialog",((TextArea) info.getComponents()[3]).getFont().getFontName());
 		assertEquals(Font.BOLD | Font.ITALIC,((TextArea) info.getComponents()[3]).getFont().getStyle());
 		assertEquals(11,((TextArea) info.getComponents()[3]).getFont().getSize());
 		
@@ -92,18 +92,18 @@ public class Test18 extends Mocks {
 		assertEquals(0.5f,((TextField) info.getComponents()[4]).getAlignmentY());
 		assertEquals(12,((TextField) info.getComponents()[4]).getX());
 		assertEquals(15,((TextField) info.getComponents()[4]).getY());
-		assertEquals("Garamond Italic",((TextField) info.getComponents()[4]).getFont().getFontName());
+		assertEquals("Dialog",((TextField) info.getComponents()[4]).getFont().getFontName());
 		assertEquals(Font.BOLD | Font.ITALIC,((TextField) info.getComponents()[4]).getFont().getStyle());
 		assertEquals(11,((TextField) info.getComponents()[4]).getFont().getSize());
 		
 	}
-	
+
 	public void testSetFont() {
 		Info info = new Info();
 		info.message("Hello");
 		
 		//These are the defaults
-		assertEquals("Tahoma",info.getFont().getFontName());
+		assertEquals("LucidaGrande",info.getFont().getFontName());
 		assertEquals(Font.PLAIN ,info.getFont().getStyle());
 		assertEquals(11,info.getFont().getSize());
 		

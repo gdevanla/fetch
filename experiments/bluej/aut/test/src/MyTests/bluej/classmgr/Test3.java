@@ -26,7 +26,6 @@ public class Test3 extends TestCase{
 		 String osname = System.getProperty("os.name", "");
 		 File javaHomeDir = new File(System.getProperty("java.home"));
 		 URL url = null;
-			
 		 if(osname.startsWith("Mac"))     // we know it does not exist on a Mac...
 			 url =  null;
 		 else {
@@ -47,7 +46,6 @@ public class Test3 extends TestCase{
 			 }
 		 }
 		 urls[0] = url;
-		
     }
     
 	 protected void tearDown() {
@@ -55,12 +53,12 @@ public class Test3 extends TestCase{
 	 }
 	 public void testClassLoader() {
 		 try {
-			 assertNotNull(urls);
-			BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-			BPClassLoader bploader1 = new BPClassLoader(urls,new URLClassLoader(urls),true);
-			assertFalse(bploader.loadsForJavaMEproject());
-			assertTrue(bploader1.loadsForJavaMEproject());
-			
+			 if(urls[0] != null) {             //In case of Mac OSX , it could be null
+				BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+				BPClassLoader bploader1 = new BPClassLoader(urls,new URLClassLoader(urls),true);
+				assertFalse(bploader.loadsForJavaMEproject());
+				assertTrue(bploader1.loadsForJavaMEproject());
+			 }
 		 }
 		 catch(Exception e) {
 			 fail();
@@ -85,93 +83,104 @@ public class Test3 extends TestCase{
 					 url = null;
 			 }
 		 }
-		 assertNotNull(url);
-		 newUrls[0] = url;
-		 assertNotNull(urls);
-		 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-		 assertTrue(bploader.sameUrls(newUrls));
+		 if(urls[0] != null) { 
+			 newUrls[0] = url;
+			 assertNotNull(urls);
+			 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+			 assertTrue(bploader.sameUrls(newUrls));
+		 }
 	 }
 	 
 	 public void testGetClassPathAsString() {
-		 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-		 String javaHome = System.getProperty("java.home");
-		
-		 //excluding the /jre from the end.
-		 javaHome = javaHome.substring(0,javaHome.length()-4);
-		 String classpath = javaHome +  File.separator + "lib" + File.separator + "tools.jar";
-		 assertEquals(classpath, bploader.getClassPathAsString());
+		 if(urls[0] != null) {      // we know it does not exist on a Mac...
+			 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+			 String javaHome = System.getProperty("java.home");
+			
+			 //excluding the /jre from the end.
+			 javaHome = javaHome.substring(0,javaHome.length()-4);
+			 String classpath = javaHome +  File.separator + "lib" + File.separator + "tools.jar";
+			 assertEquals(classpath, bploader.getClassPathAsString());
+		 }
 	 }
 	 
 	 public void testToString() {
-		 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-		 String javaHome = System.getProperty("java.home");
-		
-		 //excluding the /jre from the end.
-		 javaHome = javaHome.substring(0,javaHome.length()-4);
-		 String classpath = javaHome +  File.separator + "lib" + File.separator + "tools.jar";
-		 String toCompare = "BPClassLoader path=" + classpath;
-		 assertEquals(toCompare, bploader.toString());
+		 if(urls[0] != null)    { // we know it does not exist on a Mac...
+			 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+			 String javaHome = System.getProperty("java.home");
+			
+			 //excluding the /jre from the end.
+			 javaHome = javaHome.substring(0,javaHome.length()-4);
+			 String classpath = javaHome +  File.separator + "lib" + File.separator + "tools.jar";
+			 String toCompare = "BPClassLoader path=" + classpath;
+			 assertEquals(toCompare, bploader.toString());
+		 }
 	 }
 	 
 	 public void testGetJavaMElibsAsPath() {
-		 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-		 ArrayList<URL> urlList = new ArrayList<URL>();
-		 ArrayList<URL> urlList1 = new ArrayList<URL>();
-		 urlList.add(urls[0]);
-		 bploader.setJavaMEcoreLibs(urlList);
-		 bploader.setJavaMEoptLibs(urlList1);
-		 
-		 String javaHome = System.getProperty("java.home");
-		//excluding the /jre from the end.
-		 javaHome = javaHome.substring(0,javaHome.length()-4);
-		 String classpath = javaHome +  File.separator + "lib" + File.separator + "tools.jar";
-		 assertEquals(classpath,bploader.getJavaMElibsAsPath());
-		 
+		 if(urls[0] != null)  { // we know it does not exist on a Mac...
+			 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+			 ArrayList<URL> urlList = new ArrayList<URL>();
+			 ArrayList<URL> urlList1 = new ArrayList<URL>();
+			 urlList.add(urls[0]);
+			 bploader.setJavaMEcoreLibs(urlList);
+			 bploader.setJavaMEoptLibs(urlList1);
+			 
+			 String javaHome = System.getProperty("java.home");
+			//excluding the /jre from the end.
+			 javaHome = javaHome.substring(0,javaHome.length()-4);
+			 String classpath = javaHome +  File.separator + "lib" + File.separator + "tools.jar";
+			 assertEquals(classpath,bploader.getJavaMElibsAsPath());
+		 }
 	 }
 	 
 	 public void testGetClassPathAsFiles() throws MalformedURLException {
 		 String osname = System.getProperty("os.name", "");
-		 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-		 File javaHomeDir = new File(System.getProperty("java.home"));
-		 File[] files = new File[1];
-		 File toolsFile = null;
-		 if(!osname.startsWith("Mac"))    { // we know it does not exist on a Mac...
-			 toolsFile = new File(javaHomeDir, "lib" + File.separator + "tools.jar");
-			 if (!toolsFile.canRead()) {
-				 File parentDir = javaHomeDir.getParentFile();
-				 toolsFile = new File(parentDir, "lib" + File.separator + "tools.jar");
+		 if(urls[0] != null) { 
+			 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+			 File javaHomeDir = new File(System.getProperty("java.home"));
+			 File[] files = new File[1];
+			 File toolsFile = null;
+			 if(!osname.startsWith("Mac"))    { // we know it does not exist on a Mac...
+				 toolsFile = new File(javaHomeDir, "lib" + File.separator + "tools.jar");
+				 if (!toolsFile.canRead()) {
+					 File parentDir = javaHomeDir.getParentFile();
+					 toolsFile = new File(parentDir, "lib" + File.separator + "tools.jar");
+				 }
 			 }
+			 files[0] = toolsFile;
+			 assertEquals(files.length,bploader.getClassPathAsFiles().length);
+			 assertEquals(0,files[0].compareTo(bploader.getClassPathAsFiles()[0]));
 		 }
-		 files[0] = toolsFile;
-		 assertEquals(files.length,bploader.getClassPathAsFiles().length);
-		 assertEquals(0,files[0].compareTo(bploader.getClassPathAsFiles()[0]));
 	 }
 	 
 	 
 	 public void testGetJavaMElibsAsFiles() throws MalformedURLException {
 		 String osname = System.getProperty("os.name", "");
-		 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
-		 
-		 ArrayList<URL> urlList = new ArrayList<URL>();
-		 ArrayList<URL> urlList1 = new ArrayList<URL>();
-		 urlList.add(urls[0]);
-		 bploader.setJavaMEcoreLibs(urlList);
-		 bploader.setJavaMEoptLibs(urlList1);
-		 
-		 File javaHomeDir = new File(System.getProperty("java.home"));
-		 File[] files = new File[1];
-		 File toolsFile = null;
-		 if(!osname.startsWith("Mac"))    { // we know it does not exist on a Mac...
-			 toolsFile = new File(javaHomeDir, "lib" + File.separator + "tools.jar");
-			 if (!toolsFile.canRead()) {
-				 File parentDir = javaHomeDir.getParentFile();
-				 toolsFile = new File(parentDir, "lib" + File.separator + "tools.jar");
+		 if(urls[0] != null) { 
+			 BPClassLoader bploader = new BPClassLoader(urls,new URLClassLoader(urls));
+			 
+			 ArrayList<URL> urlList = new ArrayList<URL>();
+			 ArrayList<URL> urlList1 = new ArrayList<URL>();
+			 urlList.add(urls[0]);
+			 bploader.setJavaMEcoreLibs(urlList);
+			 bploader.setJavaMEoptLibs(urlList1);
+			 
+			 File javaHomeDir = new File(System.getProperty("java.home"));
+			 File[] files = new File[1];
+			 File toolsFile = null;
+			 if(!osname.startsWith("Mac"))    { // we know it does not exist on a Mac...
+				 toolsFile = new File(javaHomeDir, "lib" + File.separator + "tools.jar");
+				 if (!toolsFile.canRead()) {
+					 File parentDir = javaHomeDir.getParentFile();
+					 toolsFile = new File(parentDir, "lib" + File.separator + "tools.jar");
+				 }
 			 }
+			 files[0] = toolsFile;
+				 
+			 assertEquals(files.length,bploader.getJavaMElibsAsFiles().length);
+			 assertEquals(0,files[0].compareTo(bploader.getJavaMElibsAsFiles()[0]));
+			 
 		 }
-		 files[0] = toolsFile;
-		 
-		 assertEquals(files.length,bploader.getJavaMElibsAsFiles().length);
-		 assertEquals(0,files[0].compareTo(bploader.getJavaMElibsAsFiles()[0]));
 	 }
 }
 	

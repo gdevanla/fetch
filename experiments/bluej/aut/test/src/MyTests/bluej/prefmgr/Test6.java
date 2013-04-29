@@ -82,8 +82,8 @@ public class Test6 extends TestCase{
 	}
 	
 	public void test5() {
-		assertEquals(1674,PrefMgr.getTargetFont().getNumGlyphs());
-		assertEquals(1674,PrefMgr.getStandardFont().getNumGlyphs());
+		assertEquals(2826,PrefMgr.getTargetFont().getNumGlyphs());
+		assertEquals(2826,PrefMgr.getStandardFont().getNumGlyphs());
 	}
 	
 	
