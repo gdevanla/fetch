@@ -1,0 +1,15 @@
+
+
+** How data has been generated
+
+* requirements corpora
+    This was done by getting doc from original website and manual cleanup
+    using nix tools
+
+* test methods corpora
+    Use the instrumentation jar file and eclipse launcher. Refer to eclipse
+    project test configuratons.
+
+* source methods corpora
+   used the version of entrances. This writes/APPENDS to output
+   file. Currently, this can only be run from inside Eclipse.

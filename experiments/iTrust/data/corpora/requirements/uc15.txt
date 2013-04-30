@@ -1,0 +1,34 @@
+
+UC15 Maintain standards lists Use Case
+
+The administrator has authenticated himself or herself in the iTrust Medical Records system [[requirements:uc2(UC2)]].
+
+An administrator chooses to maintain the standards list for immunizations , diagnoses , allowable drugs , or allowable physical services .
+
+    The administrator will maintain [add/update] a listing of allowable immunizations that an HCP can use. The administrator will store (1) the CPT code (The CPT code set accurately describes medical, surgical, and diagnostic services and is designed to communicate uniform information about medical services and procedures among physicians, coders, patients, accreditation organizations, and payers for administrative, financial, and analytical purposes. About CPT)  and (2) up to 30 alpha characters giving the name  of the immunization.
+    The administrator will maintain a listing of allowable diagnoses that an LHCP can use. The administrator will store (1) the ICD-9CM code (The International Statistical Classification of Diseases and Related Health Problems (most commonly known by the abbreviation ICD) provides codes to classify diseases and a wide variety of signs, symptoms, abnormal findings, complaints, social circumstances and external causes of injury or disease. [[http://www.cdc.gov/nchs/icd.htmNHCS Classification of Diseases, Functioning and Disability]]) for the diagnosis ; (2) a classification that the diagnosis is either chronic/long-term OR short term; and (3) up to 30 alphanumeric characters giving the name  of the diagnosis.
+    The administrator will maintain [add/update] a listing of allowable drugs that an HCP can use. The administrator will store (1) the National Drug Code (The National Drug Code (NDC) is a universal product identifier used in the United States for drugs intended for human use. [[http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htmNational Drug Code Directory]])
+    The administrator will maintain [add/update] a listing of allowable physical services (including laboratory procedures) that an HCP can use. The administrator will store information of a LOINC code (Logical Observation Identifiers Names and Codes (LOINC) is a database and universal standard for identifying medical laboratory observations. [[http://loinc.org/LOINC c/o Medical Informatics]])  according to [[requirements:df11Data Format 6.11]]. The administrator may choose to upload a file containing LOINC code information .
+    The administrator selects a file containing LOINC information and chooses to upload it. LOINC data from this file is added to a listing of allowable physical services (including laboratory procedures that an HCP can use).  If the file contains more fields than are supported by [[requirements:df11Data Format 6.11]], all fields in [[requirements:df11Data Format 6.11]] will be updated.
+
+    The administrator types an invalid code information and is prompted to try again.
+
+
+ 1500   Add Medical Procedure Code    Admin    [empty]    15    Create    The Medical Procedure Code    No  
+ 1501   View Medical procedure code    Admin    [empty]    15    View    The Medical Procedure Code    No  
+ 1502   Edit Medical procedure code    Admin    [empty]    15    Edit    The Medical Procedure Code    No  
+ 1510   Add Immunization Code    Admin    [empty]    15    Create    The Immunization Code    No  
+ 1511   View Immunization code    Admin    [empty]    15    View    The Immunization Code    No  
+ 1512   Edit Immunization code    Admin    [empty]    15    Edit    The Immunization Code    No  
+ 1520   Add Diagnosis Code    Admin    [empty]    15    Create    The Diagnosis Code    No  
+ 1521   View Diagnosis code    Admin    [empty]    15    View    The Diagnosis Code    No  
+ 1522   Edit Diagnosis code    Admin    [empty]    15    Edit    The Diagnosis Code    No  
+ 1530   Add Drug Code    Admin    [empty]    15    Create    The Drug Code    No  
+ 1531   View Drug code    Admin    [empty]    15    View    The Drug Code    No  
+ 1532   Edit Drug code    Admin    [empty]    15    Edit    The Drug Code    No  
+ 1540   Add Physical Services Code    Admin    [empty]    15    Create    The Physical Services Code    No  
+ 1541   View Physical Services code    Admin    [empty]    15    View    The Physical Services Code    No  
+ 1542   Edit Physical Services code    Admin    [empty]    15    Edit    The Physical Services Code    No  
+ 1549   Upload Physical Services file    Admin    [empty]    15    Add    N/A    No  
+
+</textarea>
