@@ -1,0 +1,19 @@
+
+UC18 Maintain a hospital listing Use Case
+
+The administrator has authenticated himself or herself in the iTrust Medical Records system [[requirements:uc2(UC2)]].
+
+An administrator chooses to maintain the hospital listing .(Note: A personnel may be assigned to more than one [[requirements:uc2(UC 2, S1)]])
+
+    The administrator will store (1) hospital Id number for the hospital , (2) up to 30 alphanumeric characters giving the name of the hospital, and (3) an address for the hospital.
+   . The system shall enable the administrator to add a new entry for a hospital, or modify the hospital name in an existing entry. Note that the administrator is not allowed through the system interface to delete an existing entry or modify the hospital ID number in an existing entry.
+
+    The administrator types an invalid hospital ID and is prompted to try again.
+    The administrator types an invalid hospital name and is prompted to try again.
+
+
+ 1800   Add a Hospital Listing    Admin    [empty]    18    Create    Hospital ID Number    No  
+ 1801   View a Hospital Listing    Admin    [empty]    18    View    Hospital ID Number    No  
+ 1802   Edit a Hospital Listing    Admin    [empty]    18    Edit    Hospital ID Number    No  
+
+</textarea>

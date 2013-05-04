@@ -1,0 +1,35 @@
+
+UC17 Proactively Determine Needed Patient Care Use Case
+
+The HCP has authenticated himself or herself in the iTrust Medical Records system [[requirements:uc2(UC2)]].
+
+An HCP chooses Office Visit Reminders and then to identify chronic patients who need an office visit , older patients who need a flu shot , or any patient who is overdue for an immunization . The HCP is presented with a listing of patients for whom they are a DLHCP who need care because of satisfying the one of preceding conditions. The presented patient information shall include each patient's name and home phone number so that reminder calls can be made. The list is sorted based on the alphabetical order of the patients' last names, and then first names.
+
+    An alive patient who has not had an office visit for more than one year and who has been diagnosed with
+       diabetes mellitus [is diagnosed with ICD code beginning with 250:[[http://icd9cm.chrisendres.com/index.php?action=child&amp;recordid=1765]] ]
+       asthma [is diagnosed with ICD code beginning with 493:[[http://icd9cm.chrisendres.com/index.php?action=child&amp;recordid=4700]] ], or
+       circulatory-system disease [is diagnosed with an ICD code between 390 and 459 inclusive: [[http://icd9cm.chrisendres.com/index.php?action=child&amp;recordid=4025]] ].
+    An alive patient over 50 years old who has not had a flu shot [CPT codes 90656, 90658, 90660 per [[http://www.influenza.com/index.cfm?fa=ADDITIONAL_RES_HC_2]] during the months Sept - Dec of the last calendar year (or during the months Sept - Dec of the current calendar year if the retrieval time is between Sept - Dec).
+    An alive patient under the age of 19 who has not had proper immunizations per the immunization schedule. The “catch up schedule” is relevant when the patient did not begin the immunizations according to the recommended schedule.
+       __Hepatitis B (90371)__ three doses: at birth, at age 1 month, at age 6 months; catch up schedule: at least 4 weeks between dose 1 and dose 2 and at least 8 weeks between dose 2 and dose 3
+       __Rotavirus (90681)__ three doses: at age 6 weeks, at age 4 months, at age 6 months; catch up schedule: at least 4 weeks between dose 1 and dose 2 and at least 4 weeks between dose 2 and dose 3
+       __Diphtheria, Tetanus, Pertussis (90696)__ six doses: at age 6 weeks, at age 4 months, at age 6 months, at age 15 months, at age 4 years, at age 11 years; catch up schedule: at least 4 weeks between dose 1 and dose 2, at least 4 weeks between dose 2 and dose 3, at least 6 months between doses 3 and 4, at least 6 months between dose 4 and dose 5, at least 5 years between dose 5 and dose 6
+       __Haemophilus influenzae (90645)__ three doses: at 6 weeks, at age 4 months, at age 12 months; catch up schedule: at least 4 weeks between dose 1 and dose 2 and at least 4 weeks between dose 2 and dose 3 if first dose is administered at younger than 12 months; if first dose is administered between 12 and 14 months, at least 8 weeks between dose 1 and dose 2 and dose three is canceled; if first dose is administered at or after 15 months, only one dose is required
+       __Pneumococcal (90669)__ four doses: at age 6 weeks, at age 4 months, at age 6 months, at age 12 months; catch up schedule: at least 4 weeks between dose 1 and dose 2 and at least 4 weeks between dose 2 and dose 3 and at least 8 weeks between dose 3 and dose 4 if first dose is administered at younger than 12 months; if first dose is administered between 12 and 14 months, at least 8 weeks between dose 1 and dose 2 and dose three is canceled; if first dose is administered at or after 15 months, only one dose is required
+       __Poliovirus (90712)__ four doses: at age 6 weeks, at age 4 months, at age 6 months, 4 years; catch up schedule: at least 4 weeks between dose 1 and dose 2, at least 4 weeks between dose 2 and dose 3, at least 4 weeks between doses 3 and 4, dose 4 is not required if dose 3 was administered at the age of 4 or older
+      __Measles, Mumps, Rubella (90707)__ two doses: at age 12 months, at age 4 years; catch up schedule: at least 4 weeks between dose 1 and dose 2
+      __Varicella (90396)__ two doses: at age 12 months, at age 4 years; catch up schedule: at least 3 months between dose 1 and dose 2
+      __Hepatitis A (90633)__ two doses: at age 12 months; at age 18 months: catch up schedule: at least 6 months between dose 1 and dose 2
+      __Human Papillomavirus (90649)__ Female only, three doses; at age 9 years; at age 9 years + 2 months; at age 9 years + 6 months; catch up schedule: at least two months between dose 1 and dose 2; at least four months between dose 2 and dose 3
+
+None
+
+
+ 1700   Proactively determine necessary patient care    HCP    Patient    17    Other    The category the patient falls under.  Note: Each patient in the presented patient list will have one log entry.    Yes  
+
+
+[[http://www.cispimmunize.org/American Academy of Pediatrics]]
+   [[http://www.cispimmunize.org/IZSchedule_Childhood.pdfChildhood schedule (birth to 6 years)]]
+   [[http://www.cispimmunize.org/IZSchedule_Adolescent.pdfAdolescent schedule (7 to 18 years)]]
+   [[http://www.cdc.gov/vaccines/programs/iis/stds/cpt.htmCPT Codes]]
+</textarea>

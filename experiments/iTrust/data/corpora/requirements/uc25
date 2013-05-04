@@ -1,0 +1,29 @@
+
+UC25 View Physician Satisfaction Survey Results Use Case
+
+The iTrust user has authenticated himself or herself in the iTrust Medical Records system [[requirements:uc3(UC3)]].
+
+A user chooses to view physician satisfaction survey results. The user provides a zip code  or a hospital code and an (optional) physician type (from a pull-down list: see [[requirements:df2data format 6.2]] - general, surgeon, heart specialist, pediatrician, OB/GYN). The patient is provided with the following for each physician of that type that practices in a zip code (based upon the address/zipcode provided in [[requirements:uc2UC2]]) that match the first three digits of the provided zip code:
+   Name
+   Address
+   Average number of minutes patients wait in waiting room
+   Average number of minutes patients wait in examination room prior to seeing physician
+   Average office visit satisfaction
+   Average satisfaction with treatment/information
+   Percentage of office visits for which satisfaction information is available
+
+None
+
+    The input is not a valid zip code (see [[requirements:df2Data Format 6.2]]). The user is asked to try again.
+
+
+ 2500   View Physician Satisfaction Results    Patient    [empty]    25    View    None    No  
+
+
+
+
+
+
+
+
+</textarea>

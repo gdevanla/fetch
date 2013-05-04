@@ -1,0 +1,29 @@
+
+UC32 Proactively Confirm Prescription-Renewal Needs Use Case
+
+The HCP has authenticated himself or herself in the iTrust Medical Records system [[requirements:uc2(UC2)]],[[requirements:uc3(UC3)]].
+
+The HCP chooses “Potential Prescription-Renewals” and is presented with a list of patients  that satisfy ALL of the three conditions: (1) patients for whom the HCP is a DLHCP, (2) special-diagnosis-history patients , (3) patients whose prescriptions will expire within 7 days (including the 7th day) from the current date (i.e., (currentDate &lt; = expiredDate &lt; = (currentDate + 7 days)).
+
+    A chronic special-diagnosis-history patient is an alive patient who has been diagnosed with at least one of the following:
+       diabetes mellitus [is diagnosed with ICD code beginning with 250:[[http://icd9cm.chrisendres.com/icd9cm/index.php?action=child&amp;recordid=1894]] ],
+       asthma [is diagnosed with ICD code beginning with 493:[[http://icd9cm.chrisendres.com/icd9cm/index.php?action=child&amp;recordid=5000]] ], or
+       circulatory-system disease [is diagnosed with an ICD code between 390 and 459 inclusive: [[http://icd9cm.chrisendres.com/icd9cm/index.php?action=child&amp;recordid=4314]] ].
+    The patient list is titled with the HCP's name. The patient list includes the patient's name (i.e., first name and last name), phone number, and contact email address  (so that confirmation calls or emails can be made or sent outside of the iTrust system). The list is sorted based on the ascending alphabetical order of the patients' last names, and then first names. When a chronic special-diagnosis-history patient satisfies all three conditions and has multiple prescriptions satisfying the third condition, the patient is listed in the list only once. The list is a static list with no link on the patient's name, phone number, or contact email address)
+
+    If there are no patients satisfying the three conditions, an empty list is presented.
+
+
+ 3200   Proactively Confirm Prescription-Renewal Needs    HCP    Patient    32    Other    Note: Each patient in the presented patient list will have one log entry    Yes  
+ 3210   View diagnoses list    Patient    Patient    32    View    None    No  
+
+
+
+[[http://www.patentstorm.us/patents/7286996/fulltext.html]]
+
+
+
+
+
+
+</textarea>

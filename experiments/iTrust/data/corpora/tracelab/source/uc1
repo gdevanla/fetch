@@ -1,0 +1,28 @@
+
+UC10 Enter/edit personal health records Use Case
+
+An HCP is a registered user of the iTrust Medical Records system [[requirements:uc2(UC2)]]. The HCP has authenticated himself or herself in the iTrust Medical Records system [[requirements:uc3(UC3)]].
+
+An HCP chooses to enter/edit personal health information. The information is viewed/edited [S1, S2]
+
+    The health care personnel enters a MID  of a patient and confirms their selection . The health care personnel may enter/edit personal health information including editing historical values from [[requirements:df4Data Format 6.4.1]], [[requirements:df46.4.2]], [[requirements:df46.4.3]], and [[requirements:df46.4.4]], immunizations, and office visit information (date, diagnoses, medication, name of attending physician but not notes, laboratory procedures), family history (the MIDs of the patient's mother and father), Body Mass Index (BMI) , and drug allergies . The HCP can indicate the patient has passed away, providing an appropriate diagnosis code. The HCP can graph height or weight of the patient over the last 3 calendar years .
+    The HCP can choose to graph the height or weight of the patient. The HCP is presented with a &lt;del&gt;line&lt;/del&gt; chart giving the chosen measurements (either height or weight) of the patient spanning the last 3 calendar years of data, averaged by quarters (January-March, April-June, July-September, October-December) .
+    For each entry in the patient's basic health information history, the HCP is presented with an automatically-calculated value of BMI (in the format of digits XX.XX) calculated based on the formula “(weight in pounds  703)/(height in inches  height in inches)” &lt;del&gt;&lt;/del&gt;
+    The HCP can select a medication from a pull down list and add it to the list of medications the patient is allergic to.  The medication is checked against the patient's current and future prescriptions. The HCP is notified of any current or future prescriptions to which the patient has a drug allergy.
+
+    The health care professional types an invalid medical identification number and is prompted to try again.
+    The patient chosen is not the desired patient. The health care professional does not confirm the selection and is prompted to try again.
+    There are no chosen measurements recorded within a quarter. The displayed measurement for the quarter is zero.
+  &lt;del&gt;  The height measurement value is 0. “Invalid height value of 0!” instead of a BMI value is displayed.&lt;/del&gt;
+
+
+ 1000   View Personal Health Information    Viewer    Patient    10    View    None    Yes  
+ 1001   Enter/Edit Personal Health Information    Editer    Patient    10    Edit    None    Yes  
+ 1002   View Basic Health Charts   Editer    Patient    10    View    Data being Charted    Yes  
+
+
+
+
+
+
+</textarea>
