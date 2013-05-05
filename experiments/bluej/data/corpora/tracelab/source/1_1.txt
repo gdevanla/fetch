@@ -1,0 +1,3 @@
+Create a new project
+menu: Project/New Project... shortcut: —To create a new project, start
+BlueJ. Select New... from the Project menu. A file selection dialog will open. Use the file selection dialog to enter a name andlocation for the project.Click Ok, and the new project is created and opened.BlueJ will create a directory for your project, so you should be a bit careful withthe name: characters that your file system cannot cope with should not beincluded in the project name. Also, class paths will be set automatically for yourproject, and Java has trouble with some characters in the class path. Generally, itis best to stick to alphanumerical characters for project names.

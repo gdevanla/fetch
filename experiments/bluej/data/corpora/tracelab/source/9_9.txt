@@ -1,0 +1,1 @@
+Change the way applets are executedIf the appletViewer.command line is commented out (default), the viewercommand is located in the JDK directory that was used to launch BlueJ. Edit theappletViewer.command=appletviewerproperty to specify another appletviewer.

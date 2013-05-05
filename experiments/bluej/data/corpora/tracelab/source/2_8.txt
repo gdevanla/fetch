@@ -1,0 +1,1 @@
+View the implementation of a classTo see the implementation of a class, you have to Open a class. If the classdisplay is in interface mode, select the Implementation option in the drop-downbox in the editor toolbar.

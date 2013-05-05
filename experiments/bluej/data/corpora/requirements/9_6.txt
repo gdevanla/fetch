@@ -1,0 +1,1 @@
+Change my home directoryThis is also defined by Java, and if that's fine for you, don't specify this property.This property, if specified, will override Java's user.home property. The propertyis:bluej.userHome=<home_dir>

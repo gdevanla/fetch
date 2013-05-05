@@ -1,0 +1,1 @@
+Some expressions that will create objects are:new Student()"marmelade".substring(3,8)new java.util.Random()"hello" + "world"8.8 Reuse previously executed statementsThe code pad keeps a history of previously used inputs. Using the up or downarrow keys, previous input lines can easily be recalled, and edited before beingreused.

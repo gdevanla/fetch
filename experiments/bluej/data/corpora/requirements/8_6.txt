@@ -1,0 +1,1 @@
+Inspect object on the code padTo inspect an object that was returned as a result from a code pad expression,without placing it onto the object bench: just double-click the object's icon toopen the usual object inspector.

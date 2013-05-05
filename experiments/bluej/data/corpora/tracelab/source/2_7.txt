@@ -1,0 +1,1 @@
+View the interface of a classTo see the interface of a class, you have to Open a class. If the class display is inimplementation mode, select the Interface option in the drop-down box in theeditor toolbar.Showing the interface is only possible if the class has been compiled.

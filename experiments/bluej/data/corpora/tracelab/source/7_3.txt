@@ -1,0 +1,1 @@
+Save the program output to a fileterminal window:menu: Options – Save to file… shortcut: Ctrl-sThe contents of the text terminal can be saved to a file. This may be useful todocument the output of a program. To save the terminal text, select Save toFile… from the terminal's Options menu.

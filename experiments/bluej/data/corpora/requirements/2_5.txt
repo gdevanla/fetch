@@ -1,0 +1,1 @@
+Edit a classTo edit the source of a class, you first have to Open a class. If the class is ininterface view, you have to switch to the implementation view (see View theimplementation of a class). Then the class is ready to be edited

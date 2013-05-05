@@ -1,0 +1,1 @@
+To document a project properly, you should at least do the following: Write aproject description, comment all classes and comment all methods.Class comments and method comments are both entered in the class's sourcecode. Open a class to enter these comments

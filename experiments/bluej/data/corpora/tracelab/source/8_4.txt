@@ -1,0 +1,1 @@
+Enter statementsThe code pad can be used to execute statements (that is: Java instructions that donot return a value). Examples are:System.out.println("Gurkensalat");System.out.println(new java.util.Random().nextInt(10));Statements are correctly evaluated and executed with or without semicolons atthe end.
