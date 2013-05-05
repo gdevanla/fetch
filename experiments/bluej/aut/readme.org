@@ -1,1 +1,8 @@
-* If running ant, make sure the build.properties has the property bluej_home set to the correct path.
+* If running ant, make sure the build.properties has the property bluej_home set to the correct path
+
+* To instrument tests, one option is to run this command from aut folder:
+
+find test -name *Test[0-9]*class | sed -e "s/test//g" -e "s/\/classes\///g" -e "s/\//\./g" -e "s/\.class//g" | xargs -L1 ../scripts/run_all_tests.sh $1
+
+This command searches for all Tests files strips the names into "." versions
+and run junit tests on them along with the javaagent.
